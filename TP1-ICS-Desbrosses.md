@@ -1,0 +1,139 @@
+# Compte Rendu TP1 - Eloi Desbrosses
+
+1. Exercice 2
+  * Manuel
+  
+    **1. A l’aide du manuel, identifiez le rôle de la commande which.**
+    
+    Il est possible de consulter le manuel avec la commande ```man which```. Cela donne la page suivante:
+    
+    ```
+    NAME
+       which - locate a command
+    SYNOPSIS
+           which [-a] filename
+
+    DESCRIPTION
+           which  returns  the pathnames of the files (or links) which would be executed in the current environment, had its
+           arguments been given as commands in a strictly POSIX-conformant shell.  It does this by searching  the  PATH  for
+           executable files matching the names of the arguments. It does not canonicalize path names.
+
+    OPTIONS
+           -a     print all matching pathnames of each argument
+
+    EXIT STATUS
+           0      if all specified commands are found and executable
+
+           1      if one or more specified commands is nonexistent or not executable
+
+           2      if an invalid option is specified
+    ```
+    
+    La manuel donne la définition suivante: 
+    
+    _"Which returns the pathnames of the files (or links) which would be executed in the current environment..."_
+    
+    Après avoir utiliser la commande ```which``` sans argument il semblerait que le système ne retourne aucun résultat ou erreur.
+    
+    Cepentant, en ajoutant un argument comme ```ls``` tel que ```which ls```, le système retourne un chemin tel que:
+    
+    ```/usr/bin/ls```
+    
+    En naviguant dans ce dossier, j'ai remarqué qu'un fichier dénomé "_ls_" était présent.
+        
+    J'en déduis donc que la commande ```which``` permet de localiser le fichier executé lors de l'utilisation d'une commande.
+    
+    **2. Quand on consulte cette page, comment peut-on rechercher, par exemple, le mot option ?**
+    
+    Il est possible de rechercher le mot "_option_" en commençant par rechercher les fonctionnalités du manuel à l'aide de l'aide intégré, accessible en tapant ```h```. Cela donne l'écran suivant:
+    
+    ```
+                      SUMMARY OF LESS COMMANDS
+
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+      h  H                 Display this help.
+      q  :q  Q  :Q  ZZ     Exit.
+     ---------------------------------------------------------------------------
+
+                               MOVING
+
+      e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+      y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+      f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+      b  ^B  ESC-v      *  Backward one window (or N lines).
+      z                 *  Forward  one window (and set window to N).
+      w                 *  Backward one window (and set window to N).
+      ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+      d  ^D             *  Forward  one half-window (and set half-window to N).
+      u  ^U             *  Backward one half-window (and set half-window to N).
+      ESC-)  RightArrow *  Right one half screen width (or N positions).
+      ESC-(  LeftArrow  *  Left  one half screen width (or N positions).
+      ESC-}  ^RightArrow   Right to last column displayed.
+      ESC-{  ^LeftArrow    Left  to first column.
+      F                    Forward forever; like "tail -f".
+      ESC-F                Like F but stop when search pattern is found.
+      r  ^R  ^L            Repaint screen.
+    ```
+    
+    Ont peut donc remarquer que en utilisant la combinaison ```ESC-F``` il est possible de déplacer un curseur sur un patterne recherché.
+    
+    Une fois la combinaison ```ESC-F``` effectué, une liste de commande est affiché et nous permet de définir un patterne de recherche.
+    
+    ```
+                                  SEARCHING
+
+      /pattern          *  Search forward for (N-th) matching line.
+      ?pattern          *  Search backward for (N-th) matching line.
+      n                 *  Repeat previous search (for N-th occurrence).
+      N                 *  Repeat previous search in reverse direction.
+      ESC-n             *  Repeat previous search, spanning files.
+      ESC-N             *  Repeat previous search, reverse dir. & spanning files.
+      ESC-u                Undo (toggle) search highlighting.
+      &pattern          *  Display only matching lines
+            ---------------------------------------------------
+            A search pattern may be preceded by one or more of:
+            ^N or !  Search for NON-matching lines.
+            ^E or *  Search multiple files (pass thru END OF FILE).
+            ^F or @  Start search at FIRST file (for /) or last file (for ?).
+            ^K       Highlight matches, but don't move (KEEP position).
+            ^R       Don't use REGULAR EXPRESSIONS.
+    ```
+    Pour définir un patterne de recherche pour le mot "_option_" il est nécessaire de tapper: ```/option```.
+    
+    Une fois la commande validé, un passage de la documentation est affiché avec le mot définis dans le patterne
+    
+    
+    **3. Comment quitte-t-on le manuel ?**
+    
+    Il est possible de quitter la manuel à tout moment en utilisant la touche "_q_". Il peut être nécessaire de l'utiliser plus d'une fois pour sortir
+    
+    **4. Chaque section du manuel a une première page, qui présente le contenu de la section. Aﬀicher la première page de la section 6; de quoi parle cette section?**
+    
+    Il est possible d'afficher la première page (la page d'introduction) de la section 6 via la commande ```man 6 intro```. Cela nous donne le résultat suivant:
+
+    ```
+    NAME
+           intro - introduction to games
+
+    DESCRIPTION
+           Section 6 of the manual describes the games and funny little programs available on the system.
+
+    NOTES
+       Authors and copyright conditions
+           Look  at the header of the manual page source for the author(s) and copyright conditions.  Note that these can
+           be different from page to page!
+
+    COLOPHON
+           This page is part of release 4.16 of the Linux man-pages project.  A description of the  project,  information
+           about    reporting    bugs,    and    the    latest    version    of    this    page,    can   be   found   at
+           https://www.kernel.org/doc/man-pages/.
+    ``` 
+      
+      Cette section parle donc des "Jeux et petits programmes marrant disponible sur le système".
+      
+  * Navigation dans l'arborescence des fichiers
+    1. 
+2. Exercice 3
