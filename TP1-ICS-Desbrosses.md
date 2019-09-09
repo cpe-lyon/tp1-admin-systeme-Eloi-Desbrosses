@@ -1,7 +1,7 @@
 # Compte Rendu TP1 - Eloi Desbrosses
 
-1. Exercice 2
-  * Manuel
+## Exercice 2
+  ### Manuel
   
     **1. A l’aide du manuel, identifiez le rôle de la commande which.**
     
@@ -134,6 +134,105 @@
       
       Cette section parle donc des "Jeux et petits programmes marrant disponible sur le système".
       
-  * Navigation dans l'arborescence des fichiers
-    1. 
-2. Exercice 3
+ ### Navigation dans l'arborescence des fichiers**
+    **1. allez dans le dossier /var/log** 
+    
+    ```
+    serveur@serveur:/$ cd /var/log/
+    serveur@serveur:/var/log$
+    ```
+
+    **2. remontez dans le dossier parent (/var) en utilisant un chemin relatif**
+    
+    ```
+    serveur@serveur:/var/log$ cd ..
+    serveur@serveur:/var$
+    ```
+    
+    **3. retournez dans le dossier personnel** 
+    
+    ```
+    serveur@serveur:/var$ cd
+    serveur@serveur:$
+    ```
+    
+    **4. revenez au dossier précédent (/var)**
+    
+    ```
+    serveur@serveur:$ cd -
+    /var
+    serveur@serveur:/var$
+    ```
+    
+    **5. essayez d’accéder au dossier /root; que se passe-t-il?** 
+    
+    ```
+    serveur@serveur:/var$ cd /root
+    -bash: cd: /root: Permission denied
+    serveur@serveur:/var$
+    ```
+    
+    Une erreur est retourné par le système. Il semblerait que je ne possède pas la permission d'accéder à ce dossier.
+    
+    **6. essayez la commande sudo cd /root; que se passe-t-il? Expliquez**
+    
+    ```
+    serveur@serveur:/var$ sudo cd /root
+    [sudo] password for serveur:
+    sudo: cd: command not found
+    serveur@serveur:/var$
+    ```
+    
+    Lors de l'utilisation de la commande ```sudo```, notre utilisateur obtient temporairement les droit d'accès du compte administrateur. La commande "_cd_" n'existe pas car le fichier nécessaire n'existe pas. Cela est prouvable via la commande ```sudo which cd```.
+    
+    Pour cela il est nécessaire d'exécuter le programme sudo à l'air de la commande ```sudo -s```. Une fois cela effectué la commande ```cd /root``` peut être exécuté sans problèmme. Pour sortir du mode administrateur il suffit de quitter le programme sudo à l'aide de ```exit```.
+
+    **7. à partir de votre dossier personnel, créez l’arborescence suivante :**
+    
+    ```
+    root@serveur:~# mkdir Dossier1
+    root@serveur:~# touch Dossier1/Fichier1
+    root@serveur:~# mkdir Dossier2
+    root@serveur:~# mkdir Dossier2/Dossier2.1
+    root@serveur:~# mkdir Dossier2/Dossier2.2
+    root@serveur:~# touch Dossier2/Dossier2.2/Fichier2
+    root@serveur:~# touch Dossier2/Dossier2.2/Fichier3
+    ```
+    
+    **8. revenez dans votre dossier personnel; à l’aide de la commande rm, essayez de supprimer Fichier1, puis Dossier1; que se passe-t-il?** 
+    
+    ```
+    root@serveur:~# rm Dossier1/Fichier1
+    root@serveur:~# rm Dossier1
+    rm: cannot remove 'Dossier1': Is a directory
+    ```
+    
+    Il est impossible de supprimer un dossier à l'aide de la commande ```rm``` uniquement. Cela retourne une erreur.
+    
+    **9. quelle commande permet de supprimer un dossier?** 
+    
+    Il est possible de supprimer un dossier à l'aide de la commande:
+    
+    ```
+    root@serveur:~# rm -d Dossier1
+    ```
+    
+    **10. que se passe-t-il quand on applique cette commande à Dossier2?**
+    
+    ```
+    root@serveur:~# rm -d Dossier2/
+    rm: cannot remove 'Dossier2/': Directory not empty
+    ```
+    
+    Il est impossible de supprimer le dossier car celui-ci n'est pas vide. Une erreur est ainsi retourné.
+    
+    **11. comment supprimer en une seule commande Dossier2 et son contenu**
+    
+    Cela est possible via la commande:
+    
+    ```
+    root@serveur:~# rm -d -r Dossier2/
+    ```
+    
+## Exercice 3
+
