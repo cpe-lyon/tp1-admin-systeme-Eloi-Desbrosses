@@ -80,7 +80,7 @@
     
   Ont peut donc remarquer que en utilisant la combinaison ```ESC-F``` il est possible de déplacer un curseur sur un patterne recherché.
     
-    Une fois la combinaison ```ESC-F``` effectué, une liste de commande est affiché et nous permet de définir un patterne de recherche.
+  Une fois la combinaison ```ESC-F``` effectué, une liste de commande est affiché et nous permet de définir un patterne de recherche.
     
   ```
                                 SEARCHING
@@ -101,7 +101,7 @@
           ^K       Highlight matches, but don't move (KEEP position).
           ^R       Don't use REGULAR EXPRESSIONS.
   ```
-    Pour définir un patterne de recherche pour le mot "_option_" il est nécessaire de tapper: ```/option```.
+  Pour définir un patterne de recherche pour le mot "_option_" il est nécessaire de tapper: ```/option```.
     
   Une fois la commande validé, un passage de la documentation est affiché avec le mot définis dans le patterne
     
