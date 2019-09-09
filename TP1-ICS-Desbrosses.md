@@ -234,5 +234,35 @@
   root@serveur:~# rm -d -r Dossier2/
   ```
 
-## Exercice 3
+  ### Commandes importantes
+  1. Quelle commande permet d’aﬀicher l’heure? A quoi sert la commande time?
+  2. Dans votre dossier personnel, tapez successivement les commandes ls puis la; que peut-on en déduire sur les fichiers commençant par un point? 
+  3. Où se situe le programme ls? 
+  4. Que fait la commande ll? (indice : la commande alias peut vous aider) 
+  5. Quelle commande permet d’aﬀicher les fichiers contenus dans le dossier /bin? 
+  6. Que fait la commande ls ..? 
+  7. Quelle commande donne le chemin complet du dossier courant? 
+  8. Que fait la commande echo 'yo' > plop exécutée 2 fois? 
+  9. Que fait la commande echo 'yo' >> plop exécutée 2 fois? 
+  10. A quoi sert la commande file? Essayez la sur des fichiers de types différents. 
+  11. Créez un fichier toto qui contient la chaîne Hello Toto !; créer ensuite un lien titi vers ce fichier aveclacommandeln toto titi.Modifiezàprésentlecontenudetotoetaﬀichezlecontenudetiti: qu’observe-t-on? Supprimez le fichier toto; quelle conséquence cela a-t-il sur titi? 
+  12. Créez à présent un lien symbolique tutu sur titi avec la commande ln -s titi tutu. Modifiez le contenu de titi; quelle conséquence pour tutu? Et inversement? Supprimez le fichier titi; quelle conséquence cela a-t-il sur tutu? 
+  13. Aﬀichez à l’écran le fichier /var/log/syslog. Quels raccourcis clavier permettent d’interrompre et reprendre le défilement à l’écran? 
+  14. Aﬀichez les 5 premières lignes du fichier /var/log/syslog, puis les 15 dernières, puis seulement les lignes 10 à 20. 
+  15. Que fait la commande dmesg | less? 
+  16. Aﬀichez à l’écran le fichier /etc/passwd; que contient-il? Quelle commande permet d’aﬀicher la page de manuel de ce fichier? 
+  17. Aﬀichez seulement la première colonne triée par ordre alphabétique inverse
+  18. Quelle commande nous donne le nombre d’utilisateurs? 
+  19. Combien de pages de manuel comportent le mot-clé conversion dans leur description? 
+  20. A l’aide de la commande find, recherchez tous les fichiers se nommant passwd présents sur la machine 
+  21. Modifiez la commande précédente pour que la liste des fichiers trouvés soit enregistrée dans le fichier ~/list_passwd_files.txt et que les erreurs soient redirigées vers le fichier spécial /dev/null 
+  22. Dans votre dossier personnel, utilisez la commande grep pour chercher où est défini l’alias ll vu précédemment 
+  23. Utilisez la commande locate pour trouver le fichier history.log.
+  24.Créerunfichierdansvotredossierpersonnelpuisutilisezlocatepourletrouver.Apparaît-il?Pourquoi?
+  
+  ### Travailler avec plusieurs shells
+  
+  On peut utiliser jusqu’à 6 shells en parallèle. Ils portent les noms ttyX (où X va de 1 à 6) et sont accessibles via Alt + F
+  
+## Exercice 3 Découverte de l’éditeur de texte nano
 
