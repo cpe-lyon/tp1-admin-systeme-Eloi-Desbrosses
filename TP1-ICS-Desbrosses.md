@@ -3,7 +3,7 @@
 ## Exercice 2
   ### Manuel
   
-  **1. A l’aide du manuel, identifiez le rôle de la commande which.**
+  **1. À l’aide du manuel, identifiez le rôle de la commande which.**
     
   Il est possible de consulter le manuel avec la commande ```man which```. Cela donne la page suivante:
     
@@ -48,7 +48,7 @@ TRADUCTION
     
   _"which renvoie le chemin des fichiers (ou liens) qui seraient exécutés dans l'environnement courant"_
 
-  Après avoir utiliser la commande ```which``` sans argument il semblerait que le système ne retourne aucun résultat ou erreur.
+  Après avoir utilisé la commande ```which``` sans argument il semblerait que le système ne retourne aucun résultat ou erreur.
 
   Cepentant, en ajoutant un argument comme ```ls``` tel que ```which ls```, le système retourne un chemin tel que:
 
@@ -56,11 +56,11 @@ TRADUCTION
     
   En naviguant dans ce dossier, j'ai remarqué qu'un fichier dénomé "_ls_" était présent.
 
-  J'en déduis donc que la commande ```which``` permet de localiser le fichier executé lors de l'utilisation d'une commande.
+  J'en déduis donc que la commande ```which``` permet de localiser le fichier exécuté lors de l'utilisation d'une commande.
 
   **2. Quand on consulte cette page, comment peut-on rechercher, par exemple, le mot option ?**
 
-  Il est possible de rechercher le mot "_option_" en commençant par rechercher les fonctionnalités du manuel à l'aide de l'aide intégré, accessible en tapant ```h```. Ci-dessous ce trouve une partie de l'écran de résultat:
+  Il est possible de rechercher le mot "_option_" en commençant par rechercher les fonctionnalités du manuel à l'aide de l'aide intégré, accessible en tapant ```h```. Ci-dessous se trouve une partie de l'écran de résultat:
     
   ```
                           SEARCHING
@@ -77,12 +77,12 @@ TRADUCTION
    
   Pour définir un patterne de recherche pour le mot "_option_" il est nécessaire de tapper: ```/option```.
     
-  Une fois la commande validé, un passage de la documentation est affiché avec le mot définis dans le patterne
+  Une fois la commande validé, un passage de la documentation est affiché avec le mot défini dans le patterne
     
 
   **3. Comment quitte-t-on le manuel ?**
     
-  Il est possible de quitter la manuel à tout moment en utilisant la touche "_q_". Il peut être nécessaire de l'utiliser plus d'une fois pour sortir
+  Il est possible de quitter le manuel à tout moment en utilisant la touche "_q_". Il peut être nécessaire de l'utiliser plus d'une fois pour sortir
 
   **4. Chaque section du manuel a une première page, qui présente le contenu de la section. Aﬀicher la première page de la section 6; de quoi parle cette section?**
 
@@ -106,7 +106,7 @@ TRADUCTION
          https://www.kernel.org/doc/man-pages/.
   ``` 
 
-  Cette section parle donc des "Jeux et petits programmes marrant disponible sur le système".
+  Cette section parle donc des "Jeux et petits programmes marrants disponibles sur le système".
 
 ### Navigation dans l'arborescence des fichiers**
   **1. allez dans le dossier /var/log** 
@@ -157,9 +157,9 @@ TRADUCTION
   serveur@serveur:/var$
   ```
 
-  Lors de l'utilisation de la commande ```sudo```, notre utilisateur obtient temporairement les droit d'accès du compte administrateur. La commande "_cd_" n'existe pas car le fichier nécessaire n'existe pas. Cela est prouvable via la commande ```sudo which cd```.
+  Lors de l'utilisation de la commande ```sudo```, notre utilisateur obtient temporairement les droits d'accès du compte administrateur. La commande "_cd_" n'existe pas car le fichier nécessaire n'existe pas. Cela est prouvable via la commande ```sudo which cd```.
 
-  Pour cela il est nécessaire d'exécuter le programme sudo à l'air de la commande ```sudo -s```. Une fois cela effectué la commande ```cd /root``` peut être exécuté sans problèmme. Pour sortir du mode administrateur il suffit de quitter le programme sudo à l'aide de ```exit```.
+  Pour cela il est nécessaire d'exécuter le programme sudo à l'air de la commande ```sudo -s```. Une fois cela effectué la commande ```cd /root``` peux être exécuté sans problèmme. Pour sortir du mode administrateur il suffit de quitter le programme sudo à l'aide de ```exit```.
 
   **7. à partir de votre dossier personnel, créez l’arborescence suivante :**
 
@@ -198,7 +198,7 @@ TRADUCTION
   rm: cannot remove 'Dossier2/': Directory not empty
   ```
 
-  Il est impossible de supprimer le dossier car celui-ci n'est pas vide. Une erreur est ainsi retourné.
+  Il est impossible de supprimer le dossier car celui-ci n'est pas vide. Une erreur est ainsi retournée.
 
   **11. comment supprimer en une seule commande Dossier2 et son contenu**
 
@@ -225,7 +225,7 @@ TRADUCTION
    18:48:45
    ```
    
-   La commande ```time``` permet d'exécuter la commande passé en paramètre puis d'afficher le temps d'exécution de celle-ci. Par exemple:
+   La commande ```time``` permet d'exécuter la commande passée en paramètre puis d'afficher le temps d'exécution de celle-ci. Par exemple:
    
    ```
    serveur@serveur:~$ time man which
@@ -243,7 +243,7 @@ TRADUCTION
   serveur@serveur:~$
   ```
   
-  D'après les résultats des deux commandes, ont peut en déduire que les fichiers commençant par un point sont caché ou du moins non affiché par la commande de base ```ls```.
+  D'après les résultats des deux commandes, on peut en déduire que les fichiers commençant par un point sont cachés ou du moins non affiché par la commande de base ```ls```.
 
   **3. Où se situe le programme ls?** 
   
@@ -252,7 +252,7 @@ TRADUCTION
   /usr/bin/ls
   ```
   
-  À partir de la commande ```which``` précédement étudié, il est possible d'en déduire que le programme ls ce situe dans le fichier du même nom et est disponible dans les dossiers ```/usr/bin/```.
+  À partir de la commande ```which``` précédemment étudié, il est possible d'en déduire que le programme ls se situe dans le fichier du même nom et est disponible dans les dossiers ```/usr/bin/```.
   
   **4. Que fait la commande ll? (indice : la commande alias peut vous aider).**
   
@@ -277,9 +277,9 @@ TRADUCTION
   alias ls='ls --color=auto'
   ```
   
-  D'après le résultat des deux commandes, ont peut premièrement en conclure que la commande ```ll``` est un alias de la comande ```ls -alF``` ce qui est un raccourcis pour ```ls -a -l -F```.
+  D'après le résultat des deux commandes, on peut premièrement en conclure que la commande ```ll``` est un alias de la commande ```ls -alF``` ce qui est un raccourci pour ```ls -a -l -F```.
   
-  Cette alias permet de lister tous les fichiers d'un emplacement sous la forme d'une liste contenant les droits du fichier, l'utilisateur ayant créer le fichier ainsi que la date de création/dernière modification.
+  Cette alias permet de lister tous les fichiers d'un emplacement sous la forme d'une liste contenant les droits du fichier, l'utilisateur ayant créé le fichier ainsi que la date de création/dernière modification.
 
   **5. Quelle commande permet d’aﬀicher les fichiers contenus dans le dossier /bin?** 
   
@@ -311,7 +311,7 @@ TRADUCTION
   yo
   ```
   
-  D'après le retour de la commande. J'en déduis que le mot 'yo' à été écrit dans le fichier "plop". Cependant lors de la deuxième exécution, un deuxième 'yo' ne s'est pas rajouté mais à écraser le premier.
+  D'après le retour de la commande. J'en déduis que le mot 'yo' a été écrit dans le fichier "plop". Cependant lors de la deuxième exécution, un deuxiéme 'yo' ne s'est pas rajouté mais à écraser le premier.
 
   **9. Que fait la commande echo 'yo' >> plop exécutée 2 fois?** 
   
@@ -346,7 +346,7 @@ TRADUCTION
   plop: ASCII text
   ```
   
-  Après avoir télécharger une image et utiliser la commande ```file``` sur celle-ci ainsi que sur le fichier précédemment créer, j'en déduis que la commande file permet d'obtenir plus d'information sur le type de fichier passé en paramètre.
+  Après avoir téléchargé une image et utiliser la commande ```file``` sur celle-ci ainsi que sur le fichier précédemment créé, j'en déduis que la commande file permet d'obtenir plus d'informations sur le type de fichier passé en paramètre.
 
   **11. Créez un fichier toto qui contient la chaîne Hello Toto !; créer ensuite un lien titi vers ce fichier avec lacommande ```ln toto titi```. Modifiez à présent le contenu de toto et aﬀichez le contenu de titi. Qu’observe-t-on? Supprimez le fichier toto; quelle conséquence cela a-t-il sur titi?**
   
@@ -365,7 +365,7 @@ TRADUCTION
   Hello Tata !
   ```
   
-  Une fois le lien créer entre toto et titi, toutes les modifications effectué dans le fichier toto seront effectué dans le fichier titi. En revanche, lors de la suppression du fichier toto, le fichier titi ne change pas et reste tel quel.
+  Une fois le lien créé entre toto et titi, toutes les modifications effectuées dans le fichier toto seront effectuées dans le fichier titi. En revanche, lors de la suppression du fichier toto, le fichier titi ne change pas et reste tel quel.
   
   **12. Créez à présent un lien symbolique tutu sur titi avec la commande ```ln -s titi tutu```. Modifiez le contenu de titi; quelle conséquence pour tutu? Et inversement? Supprimez le fichier titi; quelle conséquence cela a-t-il sur tutu?** 
   
@@ -391,11 +391,11 @@ TRADUCTION
   serveur@serveur:~$
   ```
   
-  L'utilisation du paramètre ```-s``` rend le lien symbolique. Cela signifie que les changements opérer dans un fichier sont refléter dans l'autre fichier, dans les deux sens. De plus, lors de la suppression du fichier titi, le fichier tutu devient inexistant.
+  L'utilisation du paramètre ```-s``` rend le lien symbolique. Cela signifie que les changements opérer dans un fichier sont reflétés dans l'autre fichier, dans les deux sens. De plus, lors de la suppression du fichier titi, le fichier tutu devient inexistant.
 
   **13. Aﬀichez à l’écran le fichier /var/log/syslog. Quels raccourcis clavier permettent d’interrompre et reprendre le défilement à l’écran?** 
   
-  Les raccourcis claviers permettant d'interrompte et de reprendre le défilement à l'écran sont 
+  Les raccourcis claviers permettant d'interrompre et de reprendre le défilement à l'écran sont 
   
   ```CTRL + S``` Pour interrompre le défilement
   
@@ -442,8 +442,8 @@ TRADUCTION
   
   **15. Que fait la commande dmesg | less?** 
   
-  La commande ```dmesg``` permet d'obtenir tous les messages du noyaux kernel et la commande ```less``` permet de réduire les données d'un fichier ou d'une chaine de caractère pour devenir plus lisible.
-  La combinaison de ces deux commandes via l'opérateur ```|``` permet d'obtenir tous les messages du noyaux kernel de manière simplifié afin d'être plus lisible.
+  La commande ```dmesg``` permet d'obtenir tous les messages du noyau kernel et la commande ```less``` permet de réduire les données d'un fichier ou d'une chaine de caractère pour devenir plus lisible.
+  La combinaison de ces deux commandes via l'opérateur ```|``` permet d'obtenir tous les messages du noyau kernel de manière simplifié afin d'être plus lisible.
   
   **16. Aﬀichez à l’écran le fichier /etc/passwd; que contient-il? Quelle commande permet d’aﬀicher la page de manuel de ce fichier?** 
   
@@ -482,7 +482,7 @@ TRADUCTION
   lxd:x:998:100::/var/snap/lxd/common/lxd:/bin/false
   ```
   
-  Il est possible d'afficher la page manuel de ce fichier via la commande ```man passwd```
+  Il est possible d'afficher la page du manuel de ce fichier via la commande ```man passwd```
   
   **17. Aﬀichez seulement la première colonne triée par ordre alphabétique inverse**
   
@@ -502,6 +502,7 @@ TRADUCTION
   ```
   find / -name passwd
   ```
+ 
   
   **21. Modifiez la commande précédente pour que la liste des fichiers trouvés soit enregistrée dans le fichier ~/list_passwd_files.txt et que les erreurs soient redirigées vers le fichier spécial /dev/null** 
   
@@ -525,7 +526,7 @@ TRADUCTION
   .bash_history:ll
   ```
 
-  D'après le résultat de la commande précédente, l'alias ll est donc définis dans le fichier .bashrc.
+  D'après le résultat de la commande précédente, l'alias ll est donc défini dans le fichier .bashrc.
 
   **23. Utilisez la commande locate pour trouver le fichier history.log.**
   
