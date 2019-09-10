@@ -553,5 +553,43 @@ TRADUCTION
   
   On peut utiliser jusqu’à 6 shells en parallèle. Ils portent les noms ttyX (où X va de 1 à 6) et sont accessibles via Alt + F
   
-## Exercice 3 Découverte de l’éditeur de texte nano
+## Exercice 4 Personnalisation du shell
 
+  **1. Commencez par créer une copie de ce fichier, que vous appellerez .bashrc_bak**
+  
+  ```
+  serveur@serveur:~$ cp .bashrc .bashrc_bak
+  serveur@serveur:~$ ls -a
+  .   .bash_history  .bashrc      .cache  .local   .profile
+  ..  .bash_logout   .bashrc_bak  .gnupg  log.txt  .sudo_as_admin_successful
+  ```
+
+  **2. Editez le fichier .bashrc avec nano et décommentez la ligne force_color_prompt=yes pour activer
+  la couleur. Enregistrez le fichier et quittez nano.**
+  
+  ```
+  \# uncomment for a colored prompt, if the terminal has the capability; turned
+  \# off by default to not distract the user: the focus in a terminal window
+  \# should be on the output of commands, not on the prompt
+  force_color_prompt=yes
+```
+
+  **3.  Le fichier .bashrc est lu au démarrage du shell ; pour le recharger, il faudrait donc se déconnecter
+  puis se reconnecter ; mais il existe un autre moyen : la commande source .bashrc. Testez-la, l’invite
+  de commande devrait immédiatement passer en couleurs.**
+  
+  ```
+  serveur@serveur:~$ source .bashrc
+  -bash: /dev/null: Permission denied
+  -bash: /dev/null: Permission denied
+  serveur@serveur:~$ sudo -s
+  root@serveur:~# source .bashrc
+  ```
+
+  **4.  Les couleurs par défauts (surtout celle du dossier courant) ne sont pas très visibles. Dans .bashrc,
+  cherchez les lignes commençant par PS1= ; elles indiquent la mise en forme de l’invite de commande
+  (selon que l’on est en couleurs ou non).**
+  
+  ```
+  \e[35m[\A] - ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\$
+  ```
