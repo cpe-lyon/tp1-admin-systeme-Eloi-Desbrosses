@@ -209,7 +209,7 @@ TRADUCTION
   ```
 
   ### Commandes importantes
-  1. Quelle commande permet d’aﬀicher l’heure? A quoi sert la commande time?
+  **1. Quelle commande permet d’aﬀicher l’heure? A quoi sert la commande time?**
   
   Il est possible d'afficher l'heure via la commande ```date```. Cela à pour effet d'afficher la date complète à laquelle le système est paramétré:
   
@@ -234,7 +234,7 @@ TRADUCTION
    sys     0m0,017s
    ```
   
-  2. Dans votre dossier personnel, tapez successivement les commandes ls puis la; que peut-on en déduire sur les fichiers commençant par un point? 
+  **2. Dans votre dossier personnel, tapez successivement les commandes ls puis la; que peut-on en déduire sur les fichiers commençant par un point?** 
   
   ```
   serveur@serveur:~$ ls
@@ -245,7 +245,7 @@ TRADUCTION
   
   D'après les résultats des deux commandes, ont peut en déduire que les fichiers commençant par un point sont caché ou du moins non affiché par la commande de base ```ls```.
 
-  3. Où se situe le programme ls? 
+  **3. Où se situe le programme ls?** 
   
   ```
   serveur@serveur:~$ which ls
@@ -254,7 +254,7 @@ TRADUCTION
   
   À partir de la commande ```which``` précédement étudié, il est possible d'en déduire que le programme ls ce situe dans le fichier du même nom et est disponible dans les dossiers ```/usr/bin/```.
   
-  4. Que fait la commande ll? (indice : la commande alias peut vous aider).
+  **4. Que fait la commande ll? (indice : la commande alias peut vous aider).**
   
   ```
   serveur@serveur:~$ ll
@@ -281,17 +281,17 @@ TRADUCTION
   
   Cette alias permet de lister tous les fichiers d'un emplacement sous la forme d'une liste contenant les droits du fichier, l'utilisateur ayant créer le fichier ainsi que la date de création/dernière modification.
 
-  5. Quelle commande permet d’aﬀicher les fichiers contenus dans le dossier /bin? 
+  **5. Quelle commande permet d’aﬀicher les fichiers contenus dans le dossier /bin?** 
   
   ```
   serveur@serveur:~$ ls /bin
   ```
   
-  6. Que fait la commande ls ..? 
+  **6. Que fait la commande ls ..?** 
   
   La commande ```ls ..``` permet de lister les éléments du noeud supérieur de l'emplacement ou la commande a été effectué. Les ```..``` permettent de sélectionner le noeud supérieur relativement par rapport à l'emplacement actuel.
   
-  7. Quelle commande donne le chemin complet du dossier courant? 
+  **7. Quelle commande donne le chemin complet du dossier courant?** 
   
   Il s'agit de la commande ```pwd```:
   
@@ -300,7 +300,7 @@ TRADUCTION
   /home/serveur 
   ```
   
-  8. Que fait la commande echo 'yo' > plop exécutée 2 fois? 
+  **8. Que fait la commande echo 'yo' > plop exécutée 2 fois?** 
   
   ```
   serveur@serveur:~$ echo 'yo' > plop
@@ -313,7 +313,7 @@ TRADUCTION
   
   D'après le retour de la commande. J'en déduis que le mot 'yo' à été écrit dans le fichier "plop". Cependant lors de la deuxième exécution, un deuxième 'yo' ne s'est pas rajouté mais à écraser le premier.
 
-  9. Que fait la commande echo 'yo' >> plop exécutée 2 fois? 
+  **9. Que fait la commande echo 'yo' >> plop exécutée 2 fois?** 
   
   ```
   serveur@serveur:~$ echo 'yo' >> plop
@@ -327,7 +327,7 @@ TRADUCTION
   
   D'après le retour de la commande, J'en déduis que l'opérateur ```>>``` redirige le retour d'une commande en la rajoutant à un fichier. Cela peut créer le fichier si nécessaire.
 
-  10. A quoi sert la commande file? Essayez la sur des fichiers de types différents. 
+  **10. A quoi sert la commande file? Essayez la sur des fichiers de types différents.** 
   
   ```
   serveur@serveur:~$ wget https://bit.ly/2k6gyug picture
@@ -348,7 +348,7 @@ TRADUCTION
   
   Après avoir télécharger une image et utiliser la commande ```file``` sur celle-ci ainsi que sur le fichier précédemment créer, j'en déduis que la commande file permet d'obtenir plus d'information sur le type de fichier passé en paramètre.
 
-  11. Créez un fichier toto qui contient la chaîne Hello Toto !; créer ensuite un lien titi vers ce fichier avec lacommande ```ln toto titi```. Modifiez à présent le contenu de toto et aﬀichez le contenu de titi. Qu’observe-t-on? Supprimez le fichier toto; quelle conséquence cela a-t-il sur titi?
+  **11. Créez un fichier toto qui contient la chaîne Hello Toto !; créer ensuite un lien titi vers ce fichier avec lacommande ```ln toto titi```. Modifiez à présent le contenu de toto et aﬀichez le contenu de titi. Qu’observe-t-on? Supprimez le fichier toto; quelle conséquence cela a-t-il sur titi?**
   
   ```
   serveur@serveur:~$ nano toto
@@ -367,7 +367,7 @@ TRADUCTION
   
   Une fois le lien créer entre toto et titi, toutes les modifications effectué dans le fichier toto seront effectué dans le fichier titi. En revanche, lors de la suppression du fichier toto, le fichier titi ne change pas et reste tel quel.
   
-  12. Créez à présent un lien symbolique tutu sur titi avec la commande ```ln -s titi tutu```. Modifiez le contenu de titi; quelle conséquence pour tutu? Et inversement? Supprimez le fichier titi; quelle conséquence cela a-t-il sur tutu? 
+  **12. Créez à présent un lien symbolique tutu sur titi avec la commande ```ln -s titi tutu```. Modifiez le contenu de titi; quelle conséquence pour tutu? Et inversement? Supprimez le fichier titi; quelle conséquence cela a-t-il sur tutu?** 
   
   ```
   serveur@serveur:~$ ln -s titi tutu
@@ -393,7 +393,7 @@ TRADUCTION
   
   L'utilisation du paramètre ```-s``` rend le lien symbolique. Cela signifie que les changements opérer dans un fichier sont refléter dans l'autre fichier, dans les deux sens. De plus, lors de la suppression du fichier titi, le fichier tutu devient inexistant.
 
-  13. Aﬀichez à l’écran le fichier /var/log/syslog. Quels raccourcis clavier permettent d’interrompre et reprendre le défilement à l’écran? 
+  **13. Aﬀichez à l’écran le fichier /var/log/syslog. Quels raccourcis clavier permettent d’interrompre et reprendre le défilement à l’écran?** 
   
   Les raccourcis claviers permettant d'interrompte et de reprendre le défilement à l'écran sont 
   
@@ -401,7 +401,7 @@ TRADUCTION
   
   ```CTRL + Q``` Pour reprendre le défilement
 
-  14. Aﬀichez les 5 premières lignes du fichier /var/log/syslog, puis les 15 dernières, puis seulement les lignes 10 à 20. 
+  **14. Aﬀichez les 5 premières lignes du fichier /var/log/syslog, puis les 15 dernières, puis seulement les lignes 10 à 20.** 
   
   ```
   serveur@serveur:~$ head -5 /var/log/syslog
@@ -440,12 +440,12 @@ TRADUCTION
   Sep  9 17:31:22 serveur kernel: [    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
   ```
   
-  15. Que fait la commande dmesg | less? 
+  **15. Que fait la commande dmesg | less?** 
   
   La commande ```dmesg``` permet d'obtenir tous les messages du noyaux kernel et la commande ```less``` permet de réduire les données d'un fichier ou d'une chaine de caractère pour devenir plus lisible.
   La combinaison de ces deux commandes via l'opérateur ```|``` permet d'obtenir tous les messages du noyaux kernel de manière simplifié afin d'être plus lisible.
   
-  16. Aﬀichez à l’écran le fichier /etc/passwd; que contient-il? Quelle commande permet d’aﬀicher la page de manuel de ce fichier? 
+  **16. Aﬀichez à l’écran le fichier /etc/passwd; que contient-il? Quelle commande permet d’aﬀicher la page de manuel de ce fichier?** 
   
   ```
   serveur@serveur:~$ cat /etc/passwd
@@ -484,32 +484,32 @@ TRADUCTION
   
   Il est possible d'afficher la page manuel de ce fichier via la commande ```man passwd```
   
-  17. Aﬀichez seulement la première colonne triée par ordre alphabétique inverse
+  **17. Aﬀichez seulement la première colonne triée par ordre alphabétique inverse**
   
-  18. Quelle commande nous donne le nombre d’utilisateurs? 
+  **18. Quelle commande nous donne le nombre d’utilisateurs?** 
   
     ```[commande de la question précédente] | wc -l```
     
-  19. Combien de pages de manuel comportent le mot-clé conversion dans leur description? 
+  **19. Combien de pages de manuel comportent le mot-clé conversion dans leur description?** 
   
   ```
   serveur@serveur:~$ man -k conversion |wc -l
   4
   ```
   
-  20. A l’aide de la commande find, recherchez tous les fichiers se nommant passwd présents sur la machine 
+  **20. A l’aide de la commande find, recherchez tous les fichiers se nommant passwd présents sur la machine** 
   
   ```
   find / -name passwd
   ```
   
-  21. Modifiez la commande précédente pour que la liste des fichiers trouvés soit enregistrée dans le fichier ~/list_passwd_files.txt et que les erreurs soient redirigées vers le fichier spécial /dev/null 
+  **21. Modifiez la commande précédente pour que la liste des fichiers trouvés soit enregistrée dans le fichier ~/list_passwd_files.txt et que les erreurs soient redirigées vers le fichier spécial /dev/null** 
   
   ```
   find / -name passwd >> ~/list_passwd_files.txt 2>> /dev/null
   ```
   
-  22. Dans votre dossier personnel, utilisez la commande grep pour chercher où est défini l’alias ll vu précédemment 
+  **22. Dans votre dossier personnel, utilisez la commande grep pour chercher où est défini l’alias ll vu précédemment** 
   
   ```
   serveur@serveur:~$ grep "ll" -r
@@ -527,14 +527,14 @@ TRADUCTION
 
   D'après le résultat de la commande précédente, l'alias ll est donc définis dans le fichier .bashrc.
 
-  23. Utilisez la commande locate pour trouver le fichier history.log.
+  **23. Utilisez la commande locate pour trouver le fichier history.log.**
   
   ```
   serveur@serveur:~$ locate history.log
   /var/log/apt/history.log
   ```
 
-  24.Créer un fichier dans votre dossier personnel puis utilisez locate pour letrouver. Apparaît-il?Pourquoi?
+  **24.Créer un fichier dans votre dossier personnel puis utilisez locate pour letrouver. Apparaît-il?Pourquoi?**
   
   ```
   serveur@serveur:~$ touch fichier
